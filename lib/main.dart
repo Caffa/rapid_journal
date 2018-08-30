@@ -44,7 +44,7 @@ class EntryWindow extends State<Entry> with TickerProviderStateMixin {
     // TODO: implement build
     return new Scaffold(
       appBar: new AppBar(
-        title: new Text("Put Date Here?"),
+        title: new Text("Simple Log"),
         elevation: Theme.of(context).platform == TargetPlatform.iOS ? 0.0 : 6.0,
       ),
       body: new Column(children: <Widget>[
@@ -130,7 +130,6 @@ void _submitEntry(String txt){
 
   @override
   void dispose() {
-    // TODO: implement dispose
     for (MiniEntry entry in _entries){
       entry.animationController.dispose();
     }
